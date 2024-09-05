@@ -9,10 +9,10 @@ export interface IPomodoroTimerSessionResponse extends IBase {
 	isCompleted?: boolean
 }
 
-export type TypePomodoroSessionState = Partial<
+export type TypePomodoroTimerSessionState = Partial<
 	Omit<IPomodoroTimerSessionResponse, 'id' | 'createdAt' | 'updatedAt'>
 >
 
-export type TypePomodoroRoundState = Partial<
+export type TypePomodoroTimerRoundState = Partial<
 	Omit<IPomodoroTimerRoundResponse, 'id' | 'createdAt' | 'updatedAt'>
 >
