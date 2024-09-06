@@ -6,9 +6,9 @@ import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { toast } from 'sonner'
 
-import { Heading } from '@/components/Heading'
-import { Button } from '@/components/ui/buttons/Button'
-import { Field } from '@/components/ui/fields/Field'
+import { Button } from '@/components/ui/Button'
+import { Field } from '@/components/ui/Field'
+import { Heading } from '@/components/ui/Heading'
 
 import { IAuthForm } from '@/types/auth.types'
 
