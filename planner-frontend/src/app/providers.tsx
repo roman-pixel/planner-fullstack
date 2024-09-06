@@ -5,15 +5,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { PropsWithChildren, useState } from 'react'
 
 export function Providers({ children }: PropsWithChildren) {
-	const [client] = useState(
-		new QueryClient({
-			defaultOptions: {
-				queries: {
-					refetchOnWindowFocus: false
-				}
-			}
-		})
-	)
+	const [client] = useState(new QueryClient())
 
 	return (
 		<QueryClientProvider client={client}>

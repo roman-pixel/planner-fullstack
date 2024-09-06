@@ -50,8 +50,8 @@ export function Auth() {
 
 				<Field
 					id='email'
-					label='Email:'
-					placeholder='Enter email:'
+					label='Email'
+					placeholder='Enter email'
 					type='email'
 					extra='mb-4'
 					{...register('email', {
@@ -61,8 +61,8 @@ export function Auth() {
 
 				<Field
 					id='password'
-					label='Password: '
-					placeholder='Enter password: '
+					label='Password'
+					placeholder='Enter password'
 					type='password'
 					{...register('password', {
 						required: 'Password is required!'
