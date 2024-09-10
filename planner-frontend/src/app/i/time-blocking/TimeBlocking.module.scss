@@ -1,0 +1,23 @@
+.list {
+	.block {
+		@apply relative mb-3 flex items-center justify-between rounded p-4 text-sm;
+
+		&:active,
+		&:hover {
+			.grip {
+				@apply opacity-100;
+			}
+		}
+	}
+}
+
+.grip {
+	@apply -ml-1 mr-0.5 opacity-25 transition-opacity;
+
+	&:hover,
+	&:active {
+		.grip {
+			@apply opacity-100;
+		}
+	}
+}

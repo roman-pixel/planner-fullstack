@@ -23,14 +23,14 @@ class TimeBlocksService {
 		return response
 	}
 
-	async updatgeOrderTimeBlock(ids: string[]) {
+	async updateOrderTimeBlock(ids: string[]) {
 		const response = await axiosWithAuth.put(`${this.BASE_URL}/update-order`, {
 			ids
 		})
 		return response
 	}
 
-	async updatgeTimeBlock(id: string, data: TypeTimeBlockFormState) {
+	async updateTimeBlock(id: string, data: TypeTimeBlockFormState) {
 		const response = await axiosWithAuth.put(`${this.BASE_URL}/${id}`, data)
 		return response
 	}
