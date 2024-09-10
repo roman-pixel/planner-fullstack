@@ -1,0 +1,61 @@
+.table {
+	@apply w-full;
+
+	.header {
+		@apply grid grid-cols-[1.4fr_.4fr_.4fr_.1fr];
+	}
+
+	.header,
+	.parentsWrapper .row,
+	.parentsWrapper .colHeading {
+		@apply w-auto whitespace-nowrap rounded border-t border-border text-left;
+
+		> div {
+			@apply border-r border-border px-4 py-2;
+
+			&:last-child {
+				@apply border-0;
+			}
+		}
+	}
+
+	.parentsWrapper {
+		.colHeading {
+			@apply hover:bg-transparent;
+			background-color: #0e0f0f;
+
+			> div {
+				@apply py-3 text-xl font-semibold;
+			}
+		}
+
+		.addRow {
+			@apply border-t border-border px-4 py-2;
+		}
+
+		.row {
+			@apply relative grid grid-cols-[1.4fr_.4fr_.4fr_.1fr] font-normal;
+
+			&.completed {
+				> div > span > input {
+					@apply italic line-through opacity-50;
+				}
+			}
+
+			&:hover {
+				@apply bg-[#1c1f1f];
+			}
+
+			> div > span {
+				.grip {
+					@apply -ml-3 -mr-1 opacity-20 transition-opacity;
+
+					&:hover,
+					&:active {
+						@apply opacity-100;
+					}
+				}
+			}
+		}
+	}
+}
