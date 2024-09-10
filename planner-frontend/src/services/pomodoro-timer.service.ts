@@ -1,7 +1,7 @@
 import {
 	IPomodoroTimerSessionResponse,
-	TypePomodoroTimerRoundState,
-	TypePomodoroTimerSessionState
+	TypePomodoroTimerRoundFormState,
+	TypePomodoroTimerSessionFormState
 } from '@/types/pomodoro-timer.types'
 
 import { axiosWithAuth } from '@/api/interceptors'
@@ -23,7 +23,7 @@ class PomodoroTimerService {
 		return response
 	}
 
-	async updatgeRound(id: string, data: TypePomodoroTimerRoundState) {
+	async updatgeRound(id: string, data: TypePomodoroTimerRoundFormState) {
 		const response = await axiosWithAuth.put(
 			`${this.BASE_URL}/round/${id}`,
 			data
@@ -31,7 +31,7 @@ class PomodoroTimerService {
 		return response
 	}
 
-	async updatgeSession(id: string, data: TypePomodoroTimerSessionState) {
+	async updatgeSession(id: string, data: TypePomodoroTimerSessionFormState) {
 		const response = await axiosWithAuth.put(`${this.BASE_URL}/${id}`, data)
 		return response
 	}

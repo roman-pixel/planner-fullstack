@@ -7,12 +7,13 @@ export interface IPomodoroTimerRoundResponse extends IBase {
 
 export interface IPomodoroTimerSessionResponse extends IBase {
 	isCompleted?: boolean
+	rounds?: IPomodoroTimerRoundResponse[]
 }
 
-export type TypePomodoroTimerSessionState = Partial<
+export type TypePomodoroTimerSessionFormState = Partial<
 	Omit<IPomodoroTimerSessionResponse, 'id' | 'createdAt' | 'updatedAt'>
 >
 
-export type TypePomodoroTimerRoundState = Partial<
+export type TypePomodoroTimerRoundFormState = Partial<
 	Omit<IPomodoroTimerRoundResponse, 'id' | 'createdAt' | 'updatedAt'>
 >
